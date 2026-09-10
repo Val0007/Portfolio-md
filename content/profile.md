@@ -1,18 +1,17 @@
-![Profile](assets/images/profile.svg)
+![Profile](assets/images/profile.JPG)
 
 # SingValliyappa Velayutham
 
 Bullish on AI and George Russel winning a championship :) 
 
 ## Links
-- [LinkedIn](https://linkedin.com/in/yourname)
-- [GitHub](https://github.com/yourname)
-- [Email](mailto:you@example.com)
-- [Substack](https://yourname.substack.com)
+- [LinkedIn](https://www.linkedin.com/in/singvalliyappav/)
+- [GitHub](https://github.com/Val0007)
+- [Email](mailto:sinvel@Kth.se)
 
 ## Topics
 - RAG
 - Distributed Systems
 - Token Efficiency
-- Film making
+- Amateur Film-making
 - Amateur writing

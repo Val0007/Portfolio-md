@@ -1,17 +1,28 @@
-## Claude Code
-A CLI tool for agentic coding — delegate engineering tasks to Claude directly from your terminal.
+## SocialBetting 
+- A decentralized social betting platform designed for small groups of friends or communities. Create custom bets as smart
+contracts, lock funds on-chain, and rely on transparent smart contract execution for payouts.
+- Implemented Metamask wallet integration for deploying a bet contract on the testnet.
+- Deployed on Sepolia Testnet.
+- Built using Solidity, TypeScript, React, Web3.js, MetaMask
 
-**Stack:** TypeScript, Node.js
+Link : https://github.com/Val0007/Social-Betting---Blockchain-course-final-Project
 
-Link: https://github.com/anthropics/claude-code
+## SpotifyPlaylist-DL
+- Developed a web application that enables users to download Spotify playlists.
+- Used Spotify’s OAuth 2.0 for secure user authentication and playlist retrieval.
+- Integrated YTMusic API to identify corresponding tracks.
+- Utilized youtube-dl and FFmpeg to download and convert audio files into MP3 format.
 
-## Portfolio Site
-A minimal, markdown-driven portfolio site — this one, in fact.
+Link: https://github.com/Val0007/spotifyDownloader
 
-**Stack:** HTML, CSS, JavaScript
+## Stepout.site 
+- Built a full-stack web application for discovering location-based weekend offers, coupons, and events, aimed at reducing indecision in weekend planning.
+- Integrated Supabase authentication and PostgreSQL
+- Implemented a Redis caching layer for area-specific offer data
+- Used Supabase webhooks to automatically invalidate/update cache entries
+- Deployed on DigitalOcean and Vercel
+- Built using ReactJS, NodeJS, Supabase (PostgreSQL, Auth, Triggers, Webhooks), Redis, DigitalOcean
 
-Link: https://claude.com
+Link: https://github.com/Val0007/Stepout-Client
 
 ---
-
-*Edit this file at `content/projects.md`. Use `## Title` for each project, a short description, and (optionally) a `Link: <url>` line — a GitHub repo link renders as a repo card (stars, language, description); any other link renders a generic preview card.*

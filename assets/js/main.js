@@ -6,9 +6,10 @@ const TABS = ["experience", "projects", "education", "articles", "fun-stuff"];
 const cache = {};
 
 // Pulls a `Label: value` line out of a markdown body (own line, anywhere),
-// returning the value and the body with that line removed.
+// returning the value and the body with that line removed. Tolerates a
+// stray space before the colon (`Label : value`), a common typo.
 function extractField(bodyMd, label) {
-  const regex = new RegExp(`^${label}:\\s*(\\S+)\\s*$`, "im");
+  const regex = new RegExp(`^${label}\\s*:\\s*(\\S+)\\s*$`, "im");
   const match = bodyMd.match(regex);
   return { value: match ? match[1] : null, rest: bodyMd.replace(regex, "").trim() };
 }
