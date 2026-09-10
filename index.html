@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <img class="profile-pic" id="profile-pic" src="assets/images/profile.svg" alt="Profile photo">
+  <h1 id="site-name">Your Name</h1>
+  <p id="site-tagline">Edit <code>content/profile.md</code> to change this header.</p>
+  <div class="links" id="links"></div>
+  <div class="topics-wrapper">
+    <div class="topics" id="topics"></div>
+  </div>
+</header>
+
+<nav class="tabs" id="tabs">
+  <button class="tab-btn active" data-tab="experience">Experience</button>
+  <button class="tab-btn" data-tab="projects">Projects</button>
+  <button class="tab-btn" data-tab="education">Education</button>
+  <button class="tab-btn" data-tab="articles">Articles</button>
+  <button class="tab-btn" data-tab="fun-stuff">Fun Stuff</button>
+</nav>
+
+<main id="content-area">
+  <article class="tab-panel active" id="panel-experience"></article>
+  <article class="tab-panel" id="panel-projects"></article>
+  <article class="tab-panel" id="panel-education"></article>
+  <article class="tab-panel" id="panel-articles"></article>
+  <article class="tab-panel" id="panel-fun-stuff"></article>
+</main>
+
+<footer class="site-footer">
+  <p>Built with plain HTML/CSS/JS &middot; content lives in <code>/content/*.md</code></p>
+</footer>
+
+<script src="assets/js/marked.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
