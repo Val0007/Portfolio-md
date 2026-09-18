@@ -125,3 +125,7 @@ Thus Config G becomes the default pipeline — but at this point we've probably 
 ![F13 — Locked config G](assets/images/f13-locked-config-g.png)
 
 Thus ends the tagging experiments for the novel White Nights. Still, whether our pipeline has succeeded or not is entirely subjective at the end of the day, but from what we had as our baseline, this is an improvement, and by a margin. Also made me understand how important tagging metadata is for a RAG pipeline.
+
+---
+
+*This tagging pipeline is what all the retrieval experiments in the next article are built on top of — read part two: <a href="#articles/intent-based-retrieval-pipeline" class="article-open" data-tab="articles" data-slug="intent-based-retrieval-pipeline">Building an Intent-Based RAG Pipeline</a>.*
