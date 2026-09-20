@@ -1,3 +1,17 @@
+## Intent-Based RAG Pipeline (Article)
+- Built a RAG pipeline over an unstructured literary text (Dostoevsky’s White Nights) with an intent classifier that routes each
+query to a dynamically weighted blend of BM25, dense, and metadata retrieval.
+- Implemented and benchmarked an LLM-judge reranker and a ReAct-style agentic retrieval loop (search / lookup / finish)
+against the pipeline baseline across iterations, showing the tuned formula matched or beat both alternatives on this corpus.
+
+## Benchmarking Vector Databases for Agentic Memory (KTH Coursework Project)
+- Benchmarking Qdrant and PostgreSQL (pgvector) as memory stores for LLM agents, measuring recall, latency.
+- Built a gold dataset simulating Generative Agents (Simulacra)-style memory for 100 agents, generating observations and
+reflections with gpt-4o-mini and embedding them with text-embedding-3-small.
+- Built a brute-force retrieval pipeline to produce ground-truth results and a replayable workload trace of inserts, retrievals, and
+updates, used to score both databases identically.
+
+
 ## SocialBetting 
 - A decentralized social betting platform designed for small groups of friends or communities. Create custom bets as smart
 contracts, lock funds on-chain, and rely on transparent smart contract execution for payouts.

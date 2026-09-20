@@ -1,7 +1,7 @@
 ## Building an Intent-Based RAG Pipeline
 *Sep 2026*
 
-Part two of the White Nights series — three retrieval strategies (a weighted-fusion pipeline, an LLM judge ablation, and a ReAct agent) tested against a 10-question gold set, and why the fanciest one only ever matches the simplest one.
+Part two of the White Nights series with three retrieval strategies (a weighted fusion pipeline, an LLM judge , and a ReAct agent) tested against a 10 question gold set, and why the fanciest one only ever matches the simplest one.
 
 Article: articles/intent-based-retrieval-pipeline.md
 

@@ -1,6 +1,6 @@
 ![Profile](assets/images/profile.JPG)
 
-# SingValliyappa Velayutham
+# Singvalliyappa Velayutham
 
 Bullish on AI and George Russel winning a championship :) 
 

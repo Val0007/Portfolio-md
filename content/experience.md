@@ -1,7 +1,8 @@
 ## Research Amanuens
 *Sep 2026 – Present · KTH , Stockholm*
 
-- Benchmarking and improving tools to increase efficiency in token usage  
+- Benchmark agentic coding tools across frontier LLMs to compare token efficiency and output quality.
+- Prototype and evaluate techniques for reducing token usage in LLM-driven workflows without sacrificing task performance. 
 
 
 ## Digital Futures Summer Research Intern — KTH CHAINS

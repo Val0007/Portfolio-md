@@ -1,22 +1,28 @@
+/* Dark is the default; the toggle sets data-theme="light" on <html>. */
 :root {
-  --bg: #ffffff;
-  --fg: #1a1a1a;
-  --muted: #6b6b6b;
-  --accent: #2563eb;
-  --border: #e5e5e5;
-  --panel-bg: #fafafa;
-  color-scheme: light dark;
+  --bg: #14161a;
+  --fg: #e7eaee;
+  --muted: #9299a3;
+  --accent: #159447;
+  --accent-2: #4fcf8a;
+  --ring: #4b6b5a;
+  --border: #2a2d33;
+  --panel-bg: #1b1e23;
+  --error: #ff7b7b;
+  color-scheme: dark;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #14161a;
-    --fg: #eaeaea;
-    --muted: #9a9a9a;
-    --accent: #6ea8fe;
-    --border: #2a2d33;
-    --panel-bg: #1b1e23;
-  }
+:root[data-theme="light"] {
+  --bg: #f7f9fa;
+  --fg: #1b2026;
+  --muted: #5d6670;
+  --accent: #12783a;
+  --accent-2: #2fa05a;
+  --ring: #5f7d6d;
+  --border: #dfe4e8;
+  --panel-bg: #eef2f4;
+  --error: #c62828;
+  color-scheme: light;
 }
 
 * { box-sizing: border-box; }
@@ -25,12 +31,75 @@
   display: none !important;
 }
 
+::selection {
+  background: color-mix(in srgb, var(--accent) 35%, transparent);
+}
+
+button {
+  font-family: inherit;
+}
+
 body {
   margin: 0;
   background: var(--bg);
   color: var(--fg);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  line-height: 1.6;
+  font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-variant-numeric: lining-nums;
+  line-height: 1.65;
+}
+
+/* Brief cross-fade while toggling theme (class is added/removed by main.js) */
+:root.theme-transition,
+:root.theme-transition *,
+:root.theme-transition *::before,
+:root.theme-transition *::after {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--panel-bg);
+  color: var(--muted);
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.theme-toggle:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.theme-toggle svg {
+  width: 18px;
+  height: 18px;
+}
+
+.theme-toggle .icon-moon {
+  display: none;
+}
+
+:root[data-theme="light"] .theme-toggle .icon-sun {
+  display: none;
+}
+
+:root[data-theme="light"] .theme-toggle .icon-moon {
+  display: block;
 }
 
 .site-header {
@@ -47,13 +116,17 @@ body {
   object-fit: cover;
   display: block;
   margin: 0 auto 1rem;
-  border: 1px solid var(--border);
-  background: var(--panel-bg);
+  border: 3px dotted var(--ring);
+  padding: 3px;
+  background: none;
 }
 
 .site-header h1 {
   margin: 0 0 0.4rem;
-  font-size: 2rem;
+  font-size: 2.1rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
 }
 
 .site-header p {
@@ -152,7 +225,7 @@ body {
 .tab-btn.active {
   color: var(--accent);
   border-bottom-color: var(--accent);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 #content-area {
@@ -360,7 +433,8 @@ body {
 .card--experience {
   position: relative;
   padding-left: 1.25rem;
-  border-left: 2px solid var(--accent);
+  border-left: 2px solid transparent;
+  border-image: linear-gradient(to bottom, var(--accent), transparent) 1;
 }
 
 .card--experience::before {
@@ -633,7 +707,7 @@ body {
 }
 
 .error {
-  color: #d93636;
+  color: var(--error);
 }
 
 .site-footer {
@@ -675,4 +749,12 @@ body {
   #content-area {
     padding: 1.5rem 1rem 3rem;
   }
+}
+
+.card-title,
+.article-body h1,
+.article-body h2,
+.article-body h3 {
+  font-weight: 700;
+  letter-spacing: -0.005em;
 }

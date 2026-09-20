@@ -5,6 +5,31 @@
 const TABS = ["experience", "projects", "education", "articles", "fun-stuff"];
 const cache = {};
 
+// Light/dark toggle. The initial theme (dark by default) is set by an inline
+// script in index.html before first paint; this just handles switching.
+const themeToggle = document.getElementById("theme-toggle");
+
+function syncThemeToggleLabel() {
+  const isLight = document.documentElement.dataset.theme === "light";
+  themeToggle.setAttribute("aria-label", isLight ? "Switch to dark mode" : "Switch to light mode");
+}
+
+themeToggle.addEventListener("click", () => {
+  const root = document.documentElement;
+  const next = root.dataset.theme === "light" ? "dark" : "light";
+  root.classList.add("theme-transition");
+  root.dataset.theme = next;
+  try {
+    localStorage.setItem("theme", next);
+  } catch (e) {
+    // storage unavailable (private mode etc.) — theme just won't persist
+  }
+  syncThemeToggleLabel();
+  setTimeout(() => root.classList.remove("theme-transition"), 350);
+});
+
+syncThemeToggleLabel();
+
 // Pulls a `Label: value` line out of a markdown body (own line, anywhere),
 // returning the value and the body with that line removed. Tolerates a
 // stray space before the colon (`Label : value`), a common typo.
