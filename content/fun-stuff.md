@@ -1,5 +1,5 @@
-## Racing Times, my weekly motorsport news show
-An agentic newsroom that reads the week's F1, F2, F3, Formula E and IndyCar news, picks and fact-checks the stories, and writes a ten-minute 3D show. Pixie presents from Stockholm; Byte reports from the grid and has an opinion on every fact.
+## Racing Times, my motorsport news show
+A weekly 3D news show written by an agentic newsroom. Pixie presents, Byte loses his mind on the grid.
 
 Link: https://val0007.github.io/racing-times/
 
